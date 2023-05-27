@@ -20,5 +20,5 @@ vueClient::~vueClient() {
 void vueClient::createContent()
 {
     listeClient * l = new listeClient(this);
-    
+
 }
