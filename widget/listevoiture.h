@@ -10,6 +10,8 @@
 #include "../entity/Voiture.h"
 #include "../dao/VoitureDAO.h"
 
+
+class mainWindow;
 QT_BEGIN_NAMESPACE
 namespace Ui { class listeVoiture; }
 QT_END_NAMESPACE
@@ -21,15 +23,16 @@ public:
     explicit listeVoiture(QWidget *parent = nullptr);
     ~listeVoiture() override;
 
-
+    void addVoiture(Voiture &voiture);
 
 private:
     Ui::listeVoiture *ui;
     QTableWidget *liste;
     void createContent();
 
+
 public slots:
-    void handleVoitureAdded(Voiture &voiture);
+    //void handleVoitureAdded();
     //void handleVoitureDeleted();
 };
 

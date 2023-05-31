@@ -216,6 +216,7 @@ Voitures_autogen/timestamp: \
   C:/Program\ Files/JetBrains/CLion\ 2023.1/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.1/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/QDebug \
+  C:/Qt/5.15.2/mingw81_64/include/QtCore/QDir \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/QString \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qabstractitemmodel.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qalgorithms.h \
@@ -231,8 +232,15 @@ Voitures_autogen/timestamp: \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qcontainerfwd.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qcontainertools_impl.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtCore/qcoreevent.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qdatastream.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtCore/qdir.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtCore/qeventloop.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtCore/qfile.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtCore/qfileinfo.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qflags.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qglobal.h \
@@ -289,18 +297,24 @@ Voitures_autogen/timestamp: \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qfont.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qfontinfo.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qfontmetrics.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qicon.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qimage.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtGui/qinputmethod.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qkeysequence.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qmatrix.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qpaintdevice.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qpalette.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtGui/qpen.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qpixelformat.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qpixmap.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qpolygon.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qregion.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qrgb.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qrgba64.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtGui/qtextcursor.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtGui/qtextformat.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtGui/qtextoption.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qtgui-config.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qtguiglobal.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qtransform.h \
@@ -315,6 +329,13 @@ Voitures_autogen/timestamp: \
   C:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlquery.h \
   C:/Qt/5.15.2/mingw81_64/include/QtSql/qtsql-config.h \
   C:/Qt/5.15.2/mingw81_64/include/QtSql/qtsqlglobal.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QApplication \
+  C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QFormLayout \
+  C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QGridLayout \
+  C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QHBoxLayout \
+  C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QLabel \
+  C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QLayout \
+  C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QLineEdit \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QMainWindow \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QPushButton \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QTabWidget \
@@ -327,11 +348,15 @@ Voitures_autogen/timestamp: \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractslider.h \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractspinbox.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qapplication.h \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qformlayout.h \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qframe.h \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qgridlayout.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlayout.h \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlayoutitem.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlineedit.h \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qmainwindow.h \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qpushbutton.h \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qrubberband.h \
@@ -399,6 +424,8 @@ Voitures_autogen/timestamp: \
   C:/Users/Administrateur/CLionProjects/Voitures/dao/LocationDAO.h \
   C:/Users/Administrateur/CLionProjects/Voitures/dao/VoitureDAO.cpp \
   C:/Users/Administrateur/CLionProjects/Voitures/dao/VoitureDAO.h \
+  C:/Users/Administrateur/CLionProjects/Voitures/dao/db.cpp \
+  C:/Users/Administrateur/CLionProjects/Voitures/dao/db.h \
   C:/Users/Administrateur/CLionProjects/Voitures/entity/Client.cpp \
   C:/Users/Administrateur/CLionProjects/Voitures/entity/Client.h \
   C:/Users/Administrateur/CLionProjects/Voitures/entity/Location.cpp \

@@ -6,11 +6,19 @@
 
 #include "mainwindow.h"
 #include "ui_mainWindow.h"
+#include "../dao/BaseDAO.h"
+#include "../dao/db.h"
+#include <QDir>
 
 
 mainWindow::mainWindow(QWidget *parent) :
         QMainWindow(parent), ui(new Ui::mainWindow) {
     ui->setupUi(this);
+    this->resize(600,600);
+    //db_ = new QSqlDatabase();
+    DB::dbInit();
+    //BaseDAO<Voiture>::dbInit();
+
     createContent();
 }
 
@@ -21,12 +29,12 @@ mainWindow::~mainWindow() {
 
 void mainWindow::createContent() {
     tabWidget = new QTabWidget(this);
-    pageClient = new vueClient();
-    pageLocation = new vueLocation();
-    pageVoiture = new vueVoitures();
+    pageClient = new vueClient(this);
+    pageLocation = new vueLocation(this);
+    pageVoiture = new vueVoitures(this);
 
-    tabWidget->addTab(pageVoiture, "Voitures");
     tabWidget->addTab(pageClient, "Clients");
+    tabWidget->addTab(pageVoiture, "Voitures");
     tabWidget->addTab(pageLocation, "Locations");
     setCentralWidget(tabWidget);
 

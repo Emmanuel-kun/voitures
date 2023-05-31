@@ -169,6 +169,14 @@ build CMakeFiles/Voitures.dir/widget/listevoiture.cpp.obj: CXX_COMPILER__Voiture
   OBJECT_DIR = CMakeFiles\Voitures.dir
   OBJECT_FILE_DIR = CMakeFiles\Voitures.dir\widget
 
+build CMakeFiles/Voitures.dir/dao/db.cpp.obj: CXX_COMPILER__Voitures_Debug C$:/Users/Administrateur/CLionProjects/Voitures/dao/db.cpp || cmake_object_order_depends_target_Voitures
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles\Voitures.dir\dao\db.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
+  INCLUDES = -IC:/Users/Administrateur/CLionProjects/Voitures/cmake-build-debug/Voitures_autogen/include -isystem C:/Qt/5.15.2/mingw81_64/include -isystem C:/Qt/5.15.2/mingw81_64/include/QtCore -isystem C:/Qt/5.15.2/mingw81_64/./mkspecs/win32-g++ -isystem C:/Qt/5.15.2/mingw81_64/include/QtGui -isystem C:/Qt/5.15.2/mingw81_64/include/QtANGLE -isystem C:/Qt/5.15.2/mingw81_64/include/QtWidgets -isystem C:/Qt/5.15.2/mingw81_64/include/QtSql
+  OBJECT_DIR = CMakeFiles\Voitures.dir
+  OBJECT_FILE_DIR = CMakeFiles\Voitures.dir\dao
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Voitures
@@ -177,7 +185,7 @@ build CMakeFiles/Voitures.dir/widget/listevoiture.cpp.obj: CXX_COMPILER__Voiture
 #############################################
 # Link the executable Voitures.exe
 
-build Voitures.exe: CXX_EXECUTABLE_LINKER__Voitures_Debug CMakeFiles/Voitures.dir/Voitures_autogen/mocs_compilation.cpp.obj CMakeFiles/Voitures.dir/main.cpp.obj CMakeFiles/Voitures.dir/entity/Voiture.cpp.obj CMakeFiles/Voitures.dir/entity/Client.cpp.obj CMakeFiles/Voitures.dir/dao/BaseDAO.cpp.obj CMakeFiles/Voitures.dir/dao/VoitureDAO.cpp.obj CMakeFiles/Voitures.dir/dao/LocationDAO.cpp.obj CMakeFiles/Voitures.dir/dao/ClientDAO.cpp.obj CMakeFiles/Voitures.dir/entity/Location.cpp.obj CMakeFiles/Voitures.dir/pages/mainwindow.cpp.obj CMakeFiles/Voitures.dir/pages/vuevoitures.cpp.obj CMakeFiles/Voitures.dir/pages/vuelocation.cpp.obj CMakeFiles/Voitures.dir/pages/vueclient.cpp.obj CMakeFiles/Voitures.dir/widget/listeclient.cpp.obj CMakeFiles/Voitures.dir/widget/listevoiture.cpp.obj | C$:/Qt/5.15.2/mingw81_64/lib/libQt5Widgets.a C$:/Qt/5.15.2/mingw81_64/lib/libQt5Sql.a C$:/Qt/5.15.2/mingw81_64/lib/libQt5Gui.a C$:/Qt/5.15.2/mingw81_64/lib/libQt5Core.a || Voitures_autogen Voitures_autogen_timestamp_deps
+build Voitures.exe: CXX_EXECUTABLE_LINKER__Voitures_Debug CMakeFiles/Voitures.dir/Voitures_autogen/mocs_compilation.cpp.obj CMakeFiles/Voitures.dir/main.cpp.obj CMakeFiles/Voitures.dir/entity/Voiture.cpp.obj CMakeFiles/Voitures.dir/entity/Client.cpp.obj CMakeFiles/Voitures.dir/dao/BaseDAO.cpp.obj CMakeFiles/Voitures.dir/dao/VoitureDAO.cpp.obj CMakeFiles/Voitures.dir/dao/LocationDAO.cpp.obj CMakeFiles/Voitures.dir/dao/ClientDAO.cpp.obj CMakeFiles/Voitures.dir/entity/Location.cpp.obj CMakeFiles/Voitures.dir/pages/mainwindow.cpp.obj CMakeFiles/Voitures.dir/pages/vuevoitures.cpp.obj CMakeFiles/Voitures.dir/pages/vuelocation.cpp.obj CMakeFiles/Voitures.dir/pages/vueclient.cpp.obj CMakeFiles/Voitures.dir/widget/listeclient.cpp.obj CMakeFiles/Voitures.dir/widget/listevoiture.cpp.obj CMakeFiles/Voitures.dir/dao/db.cpp.obj | C$:/Qt/5.15.2/mingw81_64/lib/libQt5Widgets.a C$:/Qt/5.15.2/mingw81_64/lib/libQt5Sql.a C$:/Qt/5.15.2/mingw81_64/lib/libQt5Gui.a C$:/Qt/5.15.2/mingw81_64/lib/libQt5Core.a || Voitures_autogen Voitures_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = C:/Qt/5.15.2/mingw81_64/lib/libQt5Widgets.a  C:/Qt/5.15.2/mingw81_64/lib/libQt5Sql.a  C:/Qt/5.15.2/mingw81_64/lib/libQt5Gui.a  C:/Qt/5.15.2/mingw81_64/lib/libQt5Core.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Voitures.dir
@@ -236,7 +244,7 @@ build Voitures_autogen/timestamp Voitures_autogen/mocs_compilation.cpp | ${cmake
 #############################################
 # Phony custom command for CMakeFiles\Voitures_autogen_timestamp_deps
 
-build CMakeFiles/Voitures_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Voitures_autogen_timestamp_deps: phony C$:/Qt/5.15.2/mingw81_64/bin/moc.exe C$:/Qt/5.15.2/mingw81_64/lib/libQt5Gui.a C$:/Qt/5.15.2/mingw81_64/lib/libQt5Widgets.a C$:/Qt/5.15.2/mingw81_64/bin/uic.exe C$:/Qt/5.15.2/mingw81_64/lib/libQt5Core.a C$:/Qt/5.15.2/mingw81_64/lib/libQt5Sql.a
+build CMakeFiles/Voitures_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Voitures_autogen_timestamp_deps: phony C$:/Qt/5.15.2/mingw81_64/lib/libQt5Sql.a C$:/Qt/5.15.2/mingw81_64/bin/moc.exe C$:/Qt/5.15.2/mingw81_64/lib/libQt5Core.a C$:/Qt/5.15.2/mingw81_64/lib/libQt5Gui.a C$:/Qt/5.15.2/mingw81_64/lib/libQt5Widgets.a C$:/Qt/5.15.2/mingw81_64/bin/uic.exe
 
 
 #############################################

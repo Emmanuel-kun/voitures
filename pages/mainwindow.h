@@ -31,6 +31,10 @@ private:
     vueVoitures *pageVoiture;
     //ClientDAO * dao;
     void createContent();
+
+public:
+    QSqlDatabase * db_;
+
 };
 
 

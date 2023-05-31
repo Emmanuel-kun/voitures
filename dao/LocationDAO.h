@@ -12,12 +12,13 @@
 class LocationDAO : public BaseDAO<Location> {
 
 public:
-    LocationDAO(QSqlDatabase &db) : BaseDAO<Location>(db) {};
-    void init() const;
-    bool add(Location& location);
-    bool remove(const int id);
-    QList<Location> getAll();
-    Location get(const int id);
+    //LocationDAO(QSqlDatabase &db) : BaseDAO<Location>(db) {};
+    LocationDAO();
+    void init() const override;
+    bool add(Location& location) override;
+    bool remove(const int id) override;
+    QList<Location> getAll() override;
+    Location get(const int id) override;
     QList<Location> getVoitureFutureLocations(const Voiture& voiture);
 
 };

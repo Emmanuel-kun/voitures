@@ -108,6 +108,12 @@
 			null
 		],
 		[
+			"C:/Users/Administrateur/CLionProjects/Voitures/dao/db.h",
+			"MU",
+			"7LSL2MAGVG/moc_db.cpp",
+			null
+		],
+		[
 			"C:/Users/Administrateur/CLionProjects/Voitures/entity/Client.h",
 			"MU",
 			"LHIOWBJX66/moc_Client.cpp",
@@ -231,6 +237,11 @@
 		],
 		[
 			"C:/Users/Administrateur/CLionProjects/Voitures/dao/VoitureDAO.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Administrateur/CLionProjects/Voitures/dao/db.cpp",
 			"MU",
 			null
 		],

@@ -9,7 +9,9 @@
 #include <QTableWidget>
 #include <QPushButton>
 #include "../entity/Client.h"
+//#include "../pages/mainwindow.h"
 
+class mainWindow;
 QT_BEGIN_NAMESPACE
 namespace Ui { class listeClient; }
 QT_END_NAMESPACE
@@ -21,23 +23,22 @@ public:
     explicit listeClient(QWidget *parent = nullptr);
 
     ~listeClient() override;
-    void createContent(std::vector<Client> clients);
-    class DeleteButton:QPushButton{
+    void createContent();
+    class DeleteButton:public QPushButton{
     private :
         int id;
 
     public:
         DeleteButton(int client, QWidget *parent = nullptr);
-
-        void keyPressEvent(QKeyEvent *e);
+        void hitButton(const QPoint & pos);
 
     };
 
 private:
     Ui::listeClient *ui;
     QTableWidget * liste;
-
-
+public:
+    void refreshList();
 };
 
 

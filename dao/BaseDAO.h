@@ -9,12 +9,16 @@
 #include <QSqlError>
 #include <QSqlQuery>
 #include <QDebug>
+#include <QApplication>
+#include <QDir>
+#include "./db.h"
 
 template <typename T>
 class BaseDAO {
-
 public:
-    BaseDAO(QSqlDatabase &db) : db_(db) {};
+    //BaseDAO(QSqlDatabase &db) : db_(db) {};
+    //static QSqlDatabase& db_;
+    //BaseDAO();
     virtual ~BaseDAO() = default;
 
     virtual void init() const = 0;
@@ -22,11 +26,16 @@ public:
     virtual bool remove(const int id) = 0;
     virtual QList<T> getAll() = 0;
     virtual T get(const int id) = 0;
+    /*static void dbInit(){
+            QString dataFolderPath = QApplication::applicationDirPath() + "/data";
+            QDir().mkpath(dataFolderPath);
+            db_ = QSqlDatabase::addDatabase("QSQLITE");
+            db_.setDatabaseName(dataFolderPath + "/mydatabase.db");
 
+        }*/
 
-protected:
-    QSqlDatabase& db_;
 };
+
 
 
 #endif //ANNUAIREDAO_BASEDAO_H

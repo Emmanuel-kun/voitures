@@ -4,22 +4,26 @@
 
 #include "ClientDAO.h"
 
+ClientDAO::ClientDAO(){init();}
+
 void ClientDAO::init() const{
 
-    QSqlQuery query;
+    DB::db_.open();
+    QSqlQuery query = QSqlQuery(DB::db_);
 
-    if (!query.exec("CREATE TABLE client (id INTEGER PRIMARY KEY, nom TEXT, prenom TEXT, email TEXT)")) {
+    if (!query.exec("CREATE TABLE IF NOT EXISTS client (id INTEGER PRIMARY KEY, nom TEXT, prenom TEXT, email TEXT)")) {
         // Gérer l'erreur de création de la table
     }
+    DB::db_.close();
 }
 
 bool ClientDAO::add(Client& contact){
-    db_.open();
-    QSqlQuery query = QSqlQuery(db_);
-    query.prepare("INSERT INTO client (nom,prenom,mail)");
+    DB::db_.open();
+    QSqlQuery query = QSqlQuery(DB::db_);
+    query.prepare("INSERT INTO client (nom,prenom,email) VALUES (:nom,:prenom,:email)");
     query.bindValue(":nom", contact.getNom());
     query.bindValue(":prenom", contact.getPrenom());
-    query.bindValue(":mail", contact.getMail());
+    query.bindValue(":email", contact.getMail());
 
     bool result = query.exec();
     QVariant id = query.lastInsertId();
@@ -30,46 +34,52 @@ bool ClientDAO::add(Client& contact){
         QSqlError error = query.lastError();
         qDebug() << error.text();
     }
-    db_.close();
+
+    DB::db_.close();
     return result;
 }
 
 
 bool ClientDAO::remove(const int id){
-    db_.open();
-    QSqlQuery query = QSqlQuery(db_);
-    query.prepare("DELETE FROM Client where id = :id");
+    DB::db_.open();
+    QSqlQuery query = QSqlQuery(DB::db_);
+    query.prepare("DELETE FROM client where id = :id");
     query.bindValue(":id", id);
     bool result = query.exec();
     if(!result) {
         QSqlError error = query.lastError();
         qDebug() << error.text();
     }
-    db_.close();
+    DB::db_.close();
     return result;
 }
 
 QList<Client> ClientDAO::getAll(){
+    DB::db_.open();
     QSqlQuery query;
     QList<Client> qlContact;
+
     if (!query.exec("SELECT * FROM client")) {
 
     }
     while (query.next()) {
-        qlContact << Client();
+
+        qlContact << Client(query.value("id").toInt(),query.value("nom").toString(), query.value("prenom").toString(), query.value("email").toString());
     }
+    DB::db_.close();
     return qlContact;
 }
 
 
 
 Client ClientDAO::get(const int id){
-    QSqlQuery query;
+    DB::db_.open();
+    QSqlQuery query= QSqlQuery(DB::db_);
     if (!query.exec("SELECT * FROM client")) {
 
     }
     while (query.next()) {
-        return Client();
+        return Client(query.value("id").toInt(),query.value("nom").toString(), query.value("prenom").toString(), query.value("email").toString());
     }
     throw "Contact not found";
 }

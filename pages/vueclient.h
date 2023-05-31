@@ -6,6 +6,15 @@
 #define VOITURES_VUECLIENT_H
 
 #include <QWidget>
+#include <QGridLayout>
+#include <QLabel>
+#include <QLineEdit>
+#include <QPushButton>
+
+#include "../dao/ClientDAO.h"
+
+#include "../widget/listeclient.h"
+
 
 
 QT_BEGIN_NAMESPACE
@@ -23,6 +32,20 @@ public:
 
 private:
     Ui::vueClient *ui;
+    listeClient * listeCli;
+    QGridLayout * gridLayout;
+    QLabel * labelNom;
+    QLabel * labelPrenom;
+    QLabel * labelEmail;
+    QLineEdit * textNom;
+    QLineEdit * textPrenom;
+    QLineEdit * textEmail;
+
+    QPushButton * addButton;
+    QPushButton * deleteButton;
+private slots:
+    void handleClientAdded();
+
 };
 
 

@@ -11,8 +11,21 @@
 vueLocation::vueLocation(QWidget *parent) :
         QWidget(parent), ui(new Ui::vueLocation) {
     ui->setupUi(this);
+    createContent();
 }
 
 vueLocation::~vueLocation() {
     delete ui;
+}
+
+
+void vueLocation::createContent()
+{
+    listeCli= new listeClient(this);
+    listeVoi = new listeVoiture(this);
+    //form = new formVoiture(this);
+    vBoxLayout = new QVBoxLayout(this);
+    vBoxLayout->addWidget(listeCli);
+    vBoxLayout->addWidget(listeVoi);
+
 }

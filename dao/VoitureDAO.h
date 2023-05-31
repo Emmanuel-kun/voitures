@@ -13,12 +13,13 @@
 
 class VoitureDAO : public BaseDAO<Voiture>{
 public:
-    VoitureDAO(QSqlDatabase &db) : BaseDAO<Voiture>(db) {};
-    void init() const;
-    bool add(Voiture& voiture);
-    bool remove(const int id);
-    QList<Voiture> getAll();
-    Voiture get(const int id);
+    //VoitureDAO(QSqlDatabase &db) : BaseDAO<Voiture>(db) {};
+    VoitureDAO();
+    void init() const override;
+    bool add(Voiture& voiture) override;
+    bool remove(const int id) override;
+    QList<Voiture> getAll() override;
+    Voiture get(const int id) override;
 };
 
 

@@ -10,17 +10,23 @@
 #include "../entity/Client.h"
 #include <Qstring>
 #include "../dao/ClientDAO.h"
+#include <QHBoxLayout>
+
 
 listeClient::listeClient(QWidget *parent) :
         QWidget(parent), ui(new Ui::listeClient) {
     ui->setupUi(this);
-
     this->liste = new QTableWidget(this);
-    this->liste->insertColumn(3);
+    liste->resize(800,600);
+    for(int i=0;i<4;i++){
+        liste->insertColumn(i);
+    }
+    createContent();
+
     QStringList column;
 
     column << "Prenom" << "Nom" << "Mail" << "Supprimer";
-    this->liste->setVerticalHeaderLabels(column);
+    this->liste->setHorizontalHeaderLabels(column);
 }
 
 listeClient::~listeClient() {
@@ -33,18 +39,48 @@ listeClient::DeleteButton::DeleteButton(int client ,QWidget *parent):QPushButton
     this->setText("Supprimer");
 }
 
-void listeClient::DeleteButton::keyPressEvent(QKeyEvent *e)
+void listeClient::DeleteButton::hitButton(const QPoint & pos)
 {
-    ClientDAO * dao = new ClientDAO(parent()->parent()->db_);
-    dao->remove(this->id);
+    try{
+        qDebug() << "Essai de suppression du client" <<"\n";
+        qDebug() << this->id << "\n";
+        ClientDAO * dao = new ClientDAO();
+        dao->remove(this->id);
+        ((listeClient*)this->parent())->refreshList();
+    }catch(...){
+        qDebug() << "Erreur lors de la suppression du client\n";
+
+    }
 
 }
 
-void listeClient::createContent(std::vector<Client> clients) {
+void listeClient::createContent() {
+    refreshList();
+}
 
-    this->liste->insertRow(clients.size());
+void listeClient::refreshList(){
+    ClientDAO clientDao;
+    QList<Client> clients= clientDao.getAll();
+    this->liste->setRowCount(clients.size());
+    int k(0);
+    for (Client c : clients) {
 
-    for(int i = 0; i < clients.size();i++)
+        liste->setItem(k,0,new QTableWidgetItem(c.getNom()));
+        liste->setItem(k,1,new QTableWidgetItem(c.getPrenom()));
+        liste->setItem(k,2,new QTableWidgetItem(c.getMail()));
+        QWidget* pWidget = new QWidget();
+        QHBoxLayout* pLayout = new QHBoxLayout(pWidget);
+        listeClient::DeleteButton * btn_del=new listeClient::DeleteButton(c.getId(),liste);
+
+        pLayout->addWidget(btn_del);
+
+        liste->setCellWidget(k,3,pWidget);
+
+        k++;
+    }
+    liste->show();
+
+    /*for(int i = 0; i < clients.size();i++)
     {
         QString nom = clients[i].getNom();
         QString prenom = clients[i].getPrenom();
@@ -67,11 +103,5 @@ void listeClient::createContent(std::vector<Client> clients) {
         this->liste->setItem(i,2,m);
 
 
-    }
-
-}
-
-void addClient(Client c)
-{
-
+    }*/
 }

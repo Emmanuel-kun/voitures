@@ -7,8 +7,12 @@
 
 #include <QWidget>
 #include <QVBoxLayout>
+#include <QHBoxLayout>
+#include <QFormLayout>
+#include <QLineEdit>
+#include <QPushButton>
 #include "../widget/listevoiture.h"
-//#include "../widget/formvoiture.h"
+//#include "mainwindow.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -26,9 +30,18 @@ public:
 private:
     Ui::vueVoitures *ui;
     listeVoiture *liste;
-    //formVoiture *form;
     QVBoxLayout *vBoxLayout;
+    QWidget *voitureForm, *buttons;
+    QFormLayout *formLayout;
+    QLineEdit *marqueLine, *modeleLine, *anneeLine, *prixLine;
+    QHBoxLayout *hBoxLayout;
+    QPushButton *ajouterButton, *supprimerButton;
+
     void createContent();
+
+public slots:
+    void handleVoitureAdded();
+    void handleVoitureDeleted();
 };
 
 

@@ -14,7 +14,7 @@ find_package(Qt5 COMPONENTS
         sql
         REQUIRED)
 
-add_executable(Voitures main.cpp entity/Voiture.cpp entity/Voiture.h entity/Client.cpp entity/Client.h dao/BaseDAO.cpp dao/BaseDAO.h dao/VoitureDAO.cpp dao/VoitureDAO.h dao/LocationDAO.cpp dao/LocationDAO.h dao/ClientDAO.cpp dao/ClientDAO.h entity/Location.cpp entity/Location.h pages/mainwindow.cpp pages/mainwindow.h pages/mainwindow.ui pages/vuevoitures.cpp pages/vuevoitures.h pages/vuevoitures.ui pages/vuelocation.cpp pages/vuelocation.h pages/vuelocation.ui pages/vueclient.cpp pages/vueclient.h pages/vueclient.ui widget/listeclient.cpp widget/listeclient.h widget/listeclient.ui widget/listevoiture.cpp widget/listevoiture.h widget/listevoiture.ui)
+add_executable(Voitures main.cpp entity/Voiture.cpp entity/Voiture.h entity/Client.cpp entity/Client.h dao/BaseDAO.cpp dao/BaseDAO.h dao/VoitureDAO.cpp dao/VoitureDAO.h dao/LocationDAO.cpp dao/LocationDAO.h dao/ClientDAO.cpp dao/ClientDAO.h entity/Location.cpp entity/Location.h pages/mainwindow.cpp pages/mainwindow.h pages/mainwindow.ui pages/vuevoitures.cpp pages/vuevoitures.h pages/vuevoitures.ui pages/vuelocation.cpp pages/vuelocation.h pages/vuelocation.ui pages/vueclient.cpp pages/vueclient.h pages/vueclient.ui widget/listeclient.cpp widget/listeclient.h widget/listeclient.ui widget/listevoiture.cpp widget/listevoiture.h widget/listevoiture.ui dao/db.h dao/db.cpp)
 target_link_libraries(Voitures
         Qt5::Core
         Qt5::Gui

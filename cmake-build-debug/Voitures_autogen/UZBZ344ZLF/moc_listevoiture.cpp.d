@@ -195,6 +195,7 @@ C:/Users/Administrateur/CLionProjects/Voitures/cmake-build-debug/Voitures_autoge
   C:/Program\ Files/JetBrains/CLion\ 2023.1/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.1/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/QDebug \
+  C:/Qt/5.15.2/mingw81_64/include/QtCore/QDir \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/QString \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qabstractitemmodel.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qalgorithms.h \
@@ -210,8 +211,15 @@ C:/Users/Administrateur/CLionProjects/Voitures/cmake-build-debug/Voitures_autoge
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qcontainerfwd.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qcontainertools_impl.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtCore/qcoreevent.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qdatastream.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtCore/qdir.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtCore/qeventloop.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtCore/qfile.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtCore/qfileinfo.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qflags.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h \
   C:/Qt/5.15.2/mingw81_64/include/QtCore/qglobal.h \
@@ -268,8 +276,10 @@ C:/Users/Administrateur/CLionProjects/Voitures/cmake-build-debug/Voitures_autoge
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qfont.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qfontinfo.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qfontmetrics.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qicon.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qimage.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtGui/qinputmethod.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qkeysequence.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qmatrix.h \
   C:/Qt/5.15.2/mingw81_64/include/QtGui/qpaintdevice.h \
@@ -294,6 +304,7 @@ C:/Users/Administrateur/CLionProjects/Voitures/cmake-build-debug/Voitures_autoge
   C:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlquery.h \
   C:/Qt/5.15.2/mingw81_64/include/QtSql/qtsql-config.h \
   C:/Qt/5.15.2/mingw81_64/include/QtSql/qtsqlglobal.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QApplication \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QTableWidget \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QWidget \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -301,6 +312,7 @@ C:/Users/Administrateur/CLionProjects/Voitures/cmake-build-debug/Voitures_autoge
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractslider.h \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractspinbox.h \
+  C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qapplication.h \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qframe.h \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qrubberband.h \
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qsizepolicy.h \
@@ -316,5 +328,6 @@ C:/Users/Administrateur/CLionProjects/Voitures/cmake-build-debug/Voitures_autoge
   C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qwidget.h \
   C:/Users/Administrateur/CLionProjects/Voitures/dao/BaseDAO.h \
   C:/Users/Administrateur/CLionProjects/Voitures/dao/VoitureDAO.h \
+  C:/Users/Administrateur/CLionProjects/Voitures/dao/db.h \
   C:/Users/Administrateur/CLionProjects/Voitures/entity/Location.h \
   C:/Users/Administrateur/CLionProjects/Voitures/entity/Voiture.h

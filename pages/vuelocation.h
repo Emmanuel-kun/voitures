@@ -6,6 +6,10 @@
 #define VOITURES_VUELOCATION_H
 
 #include <QWidget>
+#include <QVBoxLayout>
+#include "../widget/listeclient.h"
+
+#include "../widget/listevoiture.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -19,9 +23,13 @@ public:
     explicit vueLocation(QWidget *parent = nullptr);
 
     ~vueLocation() override;
+    void createContent();
 
 private:
     Ui::vueLocation *ui;
+    listeClient * listeCli;
+    listeVoiture * listeVoi;
+    QVBoxLayout *vBoxLayout;
 };
 
 
